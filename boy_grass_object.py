@@ -42,7 +42,7 @@ class Zombie:
 
 class Ball:
     def __init__(self, speed):
-        self.x, self.y = random.randint(10, 700), 90
+        self.x, self.y = random.randint(10, 700), 53
         self.image = load_image('ball21X21.png')
         self.speed = speed
         self.top = False
@@ -67,6 +67,9 @@ def reset_world():
 
     zombie = Zombie()
     world.append(zombie)
+
+    balls = [Ball(i + 5) for i in range(20)]
+    world += balls
 
 def update_world(): # 객체 상태 갱신
     for o in world:
