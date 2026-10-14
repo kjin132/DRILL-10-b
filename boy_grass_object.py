@@ -47,6 +47,9 @@ class Ball:
         self.speed = speed
         self.top = False
     def update(self):
+        pass
+    def draw(self):
+        pass
         
 
 def reset_world():
