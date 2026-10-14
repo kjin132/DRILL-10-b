@@ -49,7 +49,8 @@ class Ball:
     def update(self):
         pass
     def draw(self):
-        pass
+        self.image.clip_draw(0, 0, self.image.w, self.image.h, self.x, self.y,
+                              self.image.w, self.image.h)
         
 
 def reset_world():
