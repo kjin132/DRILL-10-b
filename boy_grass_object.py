@@ -45,8 +45,9 @@ class Ball:
         self.x, self.y = random.randint(10, 700), 90
         self.image = load_image('ball21X21.png')
         self.speed = speed
+        self.top = False
     def update(self):
-        pass
+        
 
 def reset_world():
     global running
