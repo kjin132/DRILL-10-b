@@ -58,6 +58,8 @@ class Ball:
         elif self.top == True:
             if self.up == False:
                 self.y -= self.speed
+                if self.y < 500:
+                    self.up = True
 
     def draw(self):
         self.image.clip_draw(0, 0, self.image.w, self.image.h, self.x, self.y,
