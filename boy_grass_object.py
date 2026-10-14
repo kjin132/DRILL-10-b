@@ -53,8 +53,8 @@ class Ball:
             self.frame_width = self.image.w // size
             self.frame_height = self.image.h // size
         else:
-            self.frame_width = self.image.w * 2
-            self.frame_height = self.image.h * 2
+            self.frame_width = self.image.w * (size - 1)
+            self.frame_height = self.image.h * (size - 1)
 
     def update(self):
         if self.top == False:
@@ -68,7 +68,7 @@ class Ball:
                 self.y -= self.speed
                 if self.y < 500:
                     self.up = True
-                    
+
             elif self.up == True:
                 self.y += self.speed
                 if self.y > 550:
