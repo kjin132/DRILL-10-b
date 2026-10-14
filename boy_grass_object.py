@@ -48,23 +48,27 @@ class Ball:
         self.top = False
         self.up = False
         size = random.randint(1, 4)
+
         if size < 3:
             self.frame_width = self.image.w // size
             self.frame_height = self.image.h // size
         else:
             self.frame_width = self.image.w * 2
             self.frame_height = self.image.h * 2
+
     def update(self):
         if self.top == False:
             self.y += self.speed
             if self.y > 550:
                 self.top = True
                 self.speed = self.speed // 2
+
         elif self.top == True:
             if self.up == False:
                 self.y -= self.speed
                 if self.y < 500:
                     self.up = True
+                    
             elif self.up == True:
                 self.y += self.speed
                 if self.y > 550:
