@@ -55,6 +55,7 @@ class Ball:
             self.y += self.speed
             if self.y > 550:
                 self.top = True
+                self.speed = self.speed // 2
         elif self.top == True:
             if self.up == False:
                 self.y -= self.speed
