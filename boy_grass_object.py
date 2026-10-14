@@ -50,7 +50,11 @@ class Ball:
         self.frame_width = self.image.w // size
         self.frame_height = self.image.h //size
     def update(self):
-        self.y += self.speed
+        if self.top == False:
+            self.y += self.speed
+            if self.y > 550:
+                self.y = True
+                   
     def draw(self):
         self.image.clip_draw(0, 0, self.image.w, self.image.h, self.x, self.y,
                               self.frame_width, self.frame_height)
