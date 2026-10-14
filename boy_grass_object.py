@@ -41,7 +41,9 @@ class Zombie:
         self.x, self.y, frame_width // 2, frame_height // 2)
 
 class Ball:
-    pass
+    def __init__(self):
+        self.x, self.y = random.randint(10, 700), 90
+        
 
 def reset_world():
     global running
