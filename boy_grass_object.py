@@ -42,11 +42,12 @@ class Zombie:
 
 class Ball:
     def __init__(self, speed):
-        self.x, self.y = random.randint(10, 700), 53
+        self.x, self.y = random.randint(10, 750), 53
         self.image = load_image('ball21X21.png')
         self.speed = speed
         self.top = False
-        size = random.randint(1, 3)
+        self.up = False
+        size = random.randint(1, 1)
         self.frame_width = self.image.w // size
         self.frame_height = self.image.h //size
     def update(self):
@@ -56,6 +57,7 @@ class Ball:
                 self.top = True
         elif self.top == True:
             pass
+
     def draw(self):
         self.image.clip_draw(0, 0, self.image.w, self.image.h, self.x, self.y,
                               self.frame_width, self.frame_height)
